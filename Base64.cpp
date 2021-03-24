@@ -1,7 +1,8 @@
 #include "Base64.h"
 
-#if (defined(__AVR__))
-#include <avr\pgmspace.h>
+#include <Arduino.h>
+#if (defined(__AVR__) || defined(ARDUINO_ARCH_SAMD) || defined(ARDUINO_ARCH_SAM))
+#include <avr/pgmspace.h>
 #else
 #include <pgmspace.h>
 #endif
